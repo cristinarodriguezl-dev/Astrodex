@@ -40,7 +40,7 @@ export default function Footer() {
             </div>
 
             <p className="footer-description">
-              Enciclopedia cósmica pensada para reunir en un solo lugar todo lo relacionado con el universo para facilitar la investigacion y el aprendizaje.
+              Enciclopedia cósmica pensada para reunir en un solo lugar todo lo relacionado con el universo para facilitar la investigación y el aprendizaje.
             </p>
 
             <div className="footer-accessibility-badge">
