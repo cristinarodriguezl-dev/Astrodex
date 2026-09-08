@@ -1,5 +1,6 @@
 import CosmicBackground from "./components/cosmicBackground/CosmicBackground.jsx";
 import Header from "./components/header/Header.jsx";
+import Footer from "./components/footer/Footer.jsx";
 
 export default function App() {
   return (
@@ -11,6 +12,7 @@ export default function App() {
           En expansión... digo... construcción! ✨
         </h1>
       </main>
+      <Footer />
     </div>
   );
 }
