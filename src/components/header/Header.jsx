@@ -2,7 +2,7 @@ import "./Header.css";
 
 const NAV_LINKS = [
   { path: "#", label: "Inicio" },
-  { path: "#", label: "Catálogo de Tarjetas" },
+  { path: "#", label: "Catálogo" },
   { path: "#", label: "Astrowiki" },
   { path: "#", label: "Observatorio" },
 ];
