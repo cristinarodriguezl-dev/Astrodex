@@ -16,7 +16,7 @@ export default function Header() {
             <img
               alt="Astrodex Logo Cósmico"
               className="header-logo"
-              src="src/assets/img/icons.png"
+              src="public/icons.png"
             />
 
             <div className="header-brand">

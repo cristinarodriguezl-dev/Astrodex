@@ -29,7 +29,7 @@ export default function Footer() {
           <div className="footer-brand">
             <div className="footer-brand-header">
               <img
-                src="src/assets/img/icons.png"
+                src="public/icons.png"
                 alt="Astrodex Cute Planet Logo"
                 className="footer-logo"
               />
