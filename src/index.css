@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0b071a;
+  --color-surface: #0e0922;
+
+  --color-surface-container-lowest: #080514;
+  --color-surface-container-low: #120d2a;
+  --color-surface-container: #191238;
+  --color-surface-container-high: #22194b;
+  --color-surface-container-highest: #2e2262;
+
+  --color-on-background: #f1f5f9;
+  --color-on-surface: #f1f5f9;
+  --color-on-surface-variant: #cbd5e1;
+
+  --color-outline: #94a3b8;
+  --color-outline-variant: rgba(216, 180, 254, 0.18);
+
+  --color-primary: #e9d5ff;
+  --color-primary-container: #3b137a;
+  --color-on-primary: #24005b;
+  --color-on-primary-container: #f3e8ff;
+
+  --color-secondary: #a855f7;
+  --color-secondary-container: #7e22ce;
+  --color-on-secondary: #ffffff;
+
+  --color-tertiary: #facc15;
+  --color-tertiary-container: #ca8a04;
+  --color-on-tertiary: #422006;
+
+  --color-tertiary-fixed: #fef08a;
+  --color-tertiary-fixed-dim: #fde047;
+
+  --spacing-space-2xs: 0.25rem;
+  --spacing-space-xs: 0.5rem;
+  --spacing-space-sm: 0.75rem;
+  --spacing-space-md: 1rem;
+  --spacing-space-lg: 1.5rem;
+  --spacing-space-xl: 2rem;
+  --spacing-space-2xl: 3rem;
+  --spacing-space-3xl: 4rem;
+
+  --spacing-gutter-mobile: 1rem;
+  --spacing-gutter-tablet: 1.5rem;
+  --spacing-gutter-desktop: 2rem;
+  --spacing-container-max: 75rem;
+
+  --font-headline-sm: "Quicksand", sans-serif;
+  --font-headline-md: "Quicksand", sans-serif;
+  --font-headline-lg: "Quicksand", sans-serif;
+  --font-display-lg: "Quicksand", sans-serif;
+
+  --font-body-sm: "Plus Jakarta Sans", sans-serif;
+  --font-body-md: "Plus Jakarta Sans", sans-serif;
+  --font-body-lg: "Plus Jakarta Sans", sans-serif;
+
+  --font-label-md: "Plus Jakarta Sans", sans-serif;
+  --font-label-lg: "Plus Jakarta Sans", sans-serif;
+  --font-label-caps: "Plus Jakarta Sans", sans-serif;
+    --text-headline-sm: 20px;
+  --text-headline-sm--line-height: 28px;
+  --text-headline-sm--letter-spacing: 0.01em;
+  --text-headline-sm--font-weight: 600;
+
+  --text-headline-md: 24px;
+  --text-headline-md--line-height: 32px;
+  --text-headline-md--letter-spacing: 0em;
+  --text-headline-md--font-weight: 600;
+
+  --text-headline-lg: 32px;
+  --text-headline-lg--line-height: 40px;
+  --text-headline-lg--letter-spacing: -0.01em;
+  --text-headline-lg--font-weight: 700;
+
+  --text-display-lg: 48px;
+  --text-display-lg--line-height: 56px;
+  --text-display-lg--letter-spacing: -0.02em;
+  --text-display-lg--font-weight: 700;
+
+  --text-body-sm: 14px;
+  --text-body-sm--line-height: 20px;
+  --text-body-sm--letter-spacing: 0.01em;
+  --text-body-sm--font-weight: 400;
+
+  --text-body-md: 16px;
+  --text-body-md--line-height: 24px;
+  --text-body-md--letter-spacing: 0em;
+  --text-body-md--font-weight: 400;
+
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 28px;
+  --text-body-lg--letter-spacing: 0em;
+  --text-body-lg--font-weight: 400;
+
+  --text-label-md: 12px;
+  --text-label-md--line-height: 16px;
+  --text-label-md--letter-spacing: 0.03em;
+  --text-label-md--font-weight: 600;
+
+  --text-label-lg: 14px;
+  --text-label-lg--line-height: 20px;
+  --text-label-lg--letter-spacing: 0.02em;
+  --text-label-lg--font-weight: 600;
+
+  --text-label-caps: 11px;
+  --text-label-caps--line-height: 16px;
+  --text-label-caps--letter-spacing: 0.08em;
+  --text-label-caps--font-weight: 700;
+}

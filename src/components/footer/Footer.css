@@ -1,0 +1,153 @@
+@reference "../../index.css";
+
+.footer {
+  @apply relative z-10 w-full
+    bg-[#0a0517]
+    border-t border-purple-500/15
+    mt-space-3xl;
+}
+
+.footer-container {
+  @apply max-w-container-max
+    mx-auto
+    px-gutter-mobile
+    md:px-gutter-tablet
+    lg:px-gutter-desktop
+    py-space-2xl;
+}
+
+.footer-content {
+  @apply grid
+    grid-cols-1
+    md:grid-cols-2
+    lg:grid-cols-3
+    gap-space-xl
+    mb-space-2xl;
+}
+
+.footer-brand {
+  @apply flex
+    flex-col
+    gap-space-sm;
+}
+
+.footer-brand-header {
+  @apply flex
+    items-center
+    gap-space-xs;
+}
+
+.footer-logo {
+  @apply h-6
+    w-auto
+    object-contain
+    drop-shadow-[0_0_8px_rgba(168,85,247,0.4)];
+}
+
+.footer-title {
+  @apply font-headline-sm
+    text-headline-sm
+    text-white
+    font-bold;
+}
+
+.footer-description {
+  @apply font-body-sm
+    text-body-sm
+    text-slate-300;
+}
+
+.footer-accessibility-badge {
+  @apply inline-flex
+    items-center
+    gap-space-xs
+    px-space-sm
+    py-1
+    rounded-full
+    bg-purple-950/60
+    border border-purple-500/25
+    w-fit;
+}
+
+.footer-accessibility-badge .material-symbols-outlined {
+  @apply text-amber-300
+    text-[16px];
+}
+
+.footer-accessibility-badge span:last-child {
+  @apply font-label-caps
+    text-label-caps
+    text-purple-200;
+}
+
+.footer-column {
+  @apply flex
+    flex-col
+    gap-space-sm;
+}
+
+.footer-heading {
+  @apply font-label-lg
+    text-label-lg
+    text-purple-200
+    font-bold
+    uppercase
+    tracking-wider;
+}
+
+.footer-links {
+  @apply flex
+    flex-col
+    gap-space-xs
+    font-body-sm
+    text-body-sm;
+}
+
+.footer-link {
+  @apply text-slate-300
+    hover:text-purple-300
+    transition-colors;
+}
+
+.footer-bottom {
+  @apply pt-space-lg
+    flex
+    flex-col
+    sm:flex-row
+    items-center
+    justify-between
+    gap-space-md
+    font-body-sm
+    text-body-sm
+    text-slate-400
+    border-t border-purple-500/15;
+}
+
+.footer-copyright {
+  @apply m-0;
+}
+
+.footer-legal-links {
+  @apply flex
+    items-center
+    gap-space-lg
+    font-label-md
+    text-label-md;
+}
+
+.footer-legal-link {
+  @apply hover:text-purple-300
+    transition-colors;
+}
+
+@media (max-width: 639px) {
+  .footer-bottom {
+    @apply items-start;
+  }
+
+  .footer-legal-links {
+    @apply flex-wrap
+      gap-x-space-lg
+      gap-y-space-xs;
+  }
+}
