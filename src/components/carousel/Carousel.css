@@ -1,0 +1,92 @@
+@reference "../../index.css";
+
+.moon-carousel {
+  @apply w-full
+    max-w-container-max
+    mx-auto
+    px-gutter-mobile
+    md:px-gutter-tablet
+    lg:px-gutter-desktop
+    py-space-2xl
+    mt-space-3xl
+    flex
+    items-center
+    gap-space-md;
+}
+
+.moon-carousel-stage {
+  @apply relative
+    flex-1
+    h-[260px]
+    md:h-[400px]
+    lg:h-[500px]
+    rounded-xl
+    overflow-hidden
+    bg-[#0b071a]
+    border border-purple-500/25
+    shadow-[0_10px_35px_rgba(0,0,0,0.5)];
+}
+
+.moon-carousel-image {
+  @apply absolute
+    inset-0
+    w-full
+    h-full
+    object-contain
+    transition-transform
+    duration-700;
+}
+
+.moon-carousel-stage:hover .moon-carousel-image {
+  @apply scale-105;
+}
+
+.moon-carousel-caption-overlay {
+  @apply absolute
+    inset-y-0
+    right-0
+    w-2/3
+    flex
+    items-center
+    justify-end
+    p-space-lg
+    text-right
+    bg-gradient-to-l
+    from-[#160f38]
+    via-[#160f38]/70
+    to-transparent
+    opacity-0
+    transition-opacity
+    duration-300;
+}
+
+.moon-carousel-stage:hover .moon-carousel-caption-overlay {
+  @apply opacity-100;
+}
+
+.moon-carousel-caption-text {
+  @apply font-headline-md
+    text-white
+    max-w-[80%];
+}
+
+.moon-carousel-nav-btn {
+  @apply w-9
+    h-9
+    md:w-11
+    md:h-11
+    rounded-full
+    bg-[#19113f]/90
+    border border-purple-400/25
+    text-purple-200
+    flex
+    items-center
+    justify-center
+    transition-all
+    shrink-0;
+}
+
+.moon-carousel-nav-btn:hover {
+  @apply bg-purple-600
+    text-white;
+}

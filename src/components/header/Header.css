@@ -62,6 +62,8 @@
 
 .header-subtitle {
   @apply font-label-caps
+    text-[9px]
+    md:text-xs
     text-purple-400
     -mt-1
     tracking-wider
@@ -73,9 +75,11 @@
   @apply hidden
     md:flex
     items-center
-    gap-space-lg
+    gap-space-sm
+    lg:gap-space-lg
     bg-[#150f33]/80
-    px-space-xl
+    px-space-sm
+    lg:px-space-xl
     py-2
     rounded-full
     border border-purple-400/20
@@ -84,7 +88,8 @@
 }
 
 .header-nav-link {
-  @apply px-space-md
+  @apply px-space-sm
+    lg:px-space-md
     py-2
     rounded-full
     font-label-lg
@@ -128,18 +133,22 @@
   @apply inline-flex
     items-center
     gap-space-xs
-    px-space-lg
-    py-2.5
+    px-space-sm
+    lg:px-space-lg
+    py-2
+    lg:py-2.5
     rounded-full
     bg-gradient-to-r
     from-purple-600
     via-fuchsia-600
     to-indigo-600
     text-white
-    font-label-lg
+    text-sm
+    lg:font-label-lg
     shadow-[0_0_20px_rgba(168,85,247,0.45)]
     border border-purple-300/30
-    transition-all;
+    transition-all
+    shrink-0;
 }
 
 .header-explore-button:hover {
@@ -149,4 +158,64 @@
 
 .header-explore-button .material-symbols-outlined {
   @apply text-[18px];
+}
+
+.header-menu-toggle {
+  @apply flex
+    md:hidden
+    items-center
+    justify-center
+    w-10
+    h-10
+    rounded-full
+    bg-[#150f33]/80
+    border border-purple-400/20
+    text-slate-200
+    shrink-0;
+}
+
+.header-menu-toggle .material-symbols-outlined {
+  @apply text-[22px];
+}
+
+.header-mobile-nav {
+  @apply md:hidden
+    absolute
+    top-full
+    left-0
+    w-full
+    flex
+    flex-col
+    gap-space-sm
+    px-gutter-mobile
+    py-space-md
+    bg-[#150f33]/95
+    backdrop-blur-xl
+    border-b border-purple-500/15
+    shadow-[0_4px_25px_rgba(0,0,0,0.5)];
+}
+
+.header-mobile-nav-link {
+  @apply px-space-md
+    py-3
+    rounded-xl
+    font-label-lg
+    text-slate-300
+    transition-all;
+}
+
+.header-mobile-nav-link:hover {
+  @apply text-purple-300
+    bg-purple-950/50;
+}
+
+.header-mobile-nav-link-active {
+  @apply flex
+    items-center
+    gap-1.5
+    bg-purple-500/25
+    border border-purple-400/40
+    text-purple-200
+    font-bold
+    shadow-[0_0_15px_rgba(168,85,247,0.3)];
 }
