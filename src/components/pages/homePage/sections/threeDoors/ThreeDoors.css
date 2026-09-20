@@ -1,0 +1,108 @@
+@reference "../../../../../index.css";
+
+.three-doors {
+  @apply w-full
+    py-space-2xl
+    px-gutter-mobile
+    md:px-gutter-tablet
+    lg:px-gutter-desktop;
+}
+
+.three-doors-container {
+  @apply max-w-container-max
+    mx-auto
+    flex
+    flex-col
+    gap-space-xl;
+}
+
+.three-doors-header {
+  @apply text-center
+    max-w-2xl
+    mx-auto;
+}
+
+.three-doors-title {
+  @apply font-headline-lg
+    text-headline-lg
+    text-white;
+}
+
+.three-doors-subtitle {
+  @apply font-body-md
+    text-body-md
+    text-slate-300
+    mt-space-2xs;
+}
+
+.three-doors-grid {
+  @apply grid
+    grid-cols-1
+    md:grid-cols-3
+    gap-space-lg;
+}
+
+.three-doors-card {
+  @apply bg-[#160f38]/85
+    border border-purple-500/25
+    rounded-xl
+    p-space-lg
+    shadow-lg
+    backdrop-blur-xl
+    transition-all
+    duration-300
+    flex
+    flex-col
+    gap-space-sm
+    text-left;
+}
+
+.three-doors-card:hover {
+  @apply border-purple-400/50
+    shadow-[0_0_30px_rgba(168,85,247,0.25)];
+}
+
+.three-doors-icon {
+  @apply w-12
+    h-12
+    rounded-full
+    bg-purple-950/70
+    border border-purple-500/30
+    flex
+    items-center
+    justify-center
+    text-purple-300;
+}
+
+.three-doors-card-title {
+  @apply font-headline-sm
+    text-headline-sm
+    text-white
+    transition-colors;
+}
+
+.three-doors-card:hover .three-doors-card-title {
+  @apply text-purple-300;
+}
+
+.three-doors-card-text {
+  @apply font-body-sm
+    text-body-sm
+    text-slate-300
+    flex-1;
+}
+
+.three-doors-card-link {
+  @apply inline-flex
+    items-center
+    gap-1
+    font-label-md
+    text-label-md
+    text-purple-300
+    font-bold
+    transition-colors;
+}
+
+.three-doors-card:hover .three-doors-card-link {
+  @apply text-white;
+}
