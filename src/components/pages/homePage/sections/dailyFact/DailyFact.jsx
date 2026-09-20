@@ -1,4 +1,5 @@
 import "./DailyFact.css";
+import plutoHeart from "../../../../../img/plutoheart.png";
 
 export default function DailyFact() {
   return (
@@ -25,7 +26,7 @@ export default function DailyFact() {
 
         <div className="daily-fact-image-wrapper">
           <img
-            src="src/img/plutoheart.png"
+            src={plutoHeart}
             alt="Plutón"
             className="daily-fact-image"
           />
