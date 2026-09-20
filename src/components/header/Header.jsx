@@ -1,8 +1,9 @@
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 import "./Header.css";
 
 const NAV_LINKS = [
-  { path: "#", label: "Inicio" },
+  { path: "/", label: "Inicio" },
   { path: "#", label: "Catálogo" },
   { path: "#", label: "Astrowiki" },
   { path: "#", label: "Observatorio" },
@@ -15,46 +16,45 @@ export default function Header() {
     <header className="header">
       <div className="header-container">
         <div className="header-logo-container">
-          <a href="#" className="header-logo-link">
+          <NavLink to="/" className="header-logo-link">
             <img
               alt="Astrodex Logo Cósmico"
               className="header-logo"
-              src="public/icons.png"
+              src="/icons.png"
             />
 
             <div className="header-brand">
-              <span className="header-title">
-                Astrodex
-              </span>
-
-              <span className="header-subtitle">
-                Enciclopedia cósmica
-              </span>
+              <span className="header-title">Astrodex</span>
+              <span className="header-subtitle">Enciclopedia cósmica</span>
             </div>
-          </a>
+          </NavLink>
         </div>
 
         <nav className="header-nav">
-  {NAV_LINKS.map((link, i) => (
-    <a
-      key={i}
-      href={link.path}
-      className={`header-nav-link ${
-        i === 0 ? "header-nav-link-active" : ""
-      }`}
-    >
-      {i === 0 && <span className="header-active-dot" />}
-      <span>{link.label}</span>
-    </a>
-  ))}
-</nav>
+          {NAV_LINKS.map((link, i) => (
+            <NavLink
+              key={i}
+              to={link.path}
+              end
+              className={({ isActive }) =>
+                `header-nav-link ${isActive && link.path !== "#" ? "header-nav-link-active" : ""}`
+              }
+            >
+              {({ isActive }) => (
+                <>
+                  {isActive && link.path !== "#" && (
+                    <span className="header-active-dot" />
+                  )}
+                  <span>{link.label}</span>
+                </>
+              )}
+            </NavLink>
+          ))}
+        </nav>
 
         <div className="header-actions">
           <button className="header-explore-button">
-            <span className="material-symbols-outlined">
-              auto_awesome
-            </span>
-
+            <span className="material-symbols-outlined">auto_awesome</span>
             <span className="hidden lg:inline">Explorar Cosmos</span>
           </button>
 
@@ -73,17 +73,24 @@ export default function Header() {
       {isMenuOpen && (
         <nav className="header-mobile-nav">
           {NAV_LINKS.map((link, i) => (
-            <a
+            <NavLink
               key={i}
-              href={link.path}
-              className={`header-mobile-nav-link ${
-                i === 0 ? "header-mobile-nav-link-active" : ""
-              }`}
+              to={link.path}
+              end
+              className={({ isActive }) =>
+                `header-mobile-nav-link ${isActive && link.path !== "#" ? "header-mobile-nav-link-active" : ""}`
+              }
               onClick={() => setIsMenuOpen(false)}
             >
-              {i === 0 && <span className="header-active-dot" />}
-              <span>{link.label}</span>
-            </a>
+              {({ isActive }) => (
+                <>
+                  {isActive && link.path !== "#" && (
+                    <span className="header-active-dot" />
+                  )}
+                  <span>{link.label}</span>
+                </>
+              )}
+            </NavLink>
           ))}
         </nav>
       )}

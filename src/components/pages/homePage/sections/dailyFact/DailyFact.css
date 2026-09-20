@@ -1,0 +1,91 @@
+@reference "../../../../../index.css";
+
+.daily-fact {
+  @apply w-full
+    px-gutter-mobile
+    md:px-gutter-tablet
+    lg:px-gutter-desktop
+    pb-space-xl;
+}
+
+.daily-fact-card {
+  @apply max-w-container-max
+    mx-auto
+    bg-[#160f38]/85
+    border border-purple-500/25
+    rounded-xl
+    overflow-hidden
+    shadow-lg
+    backdrop-blur-xl
+    grid
+    grid-cols-1
+    md:grid-cols-2;
+}
+
+.daily-fact-content {
+  @apply p-space-lg
+    sm:p-space-xl
+    flex
+    flex-col
+    justify-center
+    gap-space-sm
+    text-left;
+}
+
+.daily-fact-badge {
+  @apply inline-flex
+    w-fit
+    items-center
+    px-space-sm
+    py-1
+    rounded-full
+    bg-purple-950/80
+    border border-purple-400/30
+    font-label-caps
+    text-label-caps
+    text-purple-200
+    font-bold
+    uppercase;
+}
+
+.daily-fact-title {
+  @apply font-headline-lg
+    text-headline-lg
+    text-white;
+}
+
+.daily-fact-text {
+  @apply font-body-md
+    text-body-md
+    text-slate-300;
+}
+
+.daily-fact-link {
+  @apply inline-flex
+    w-fit
+    items-center
+    gap-1
+    font-label-lg
+    text-label-lg
+    text-purple-300
+    font-bold
+    transition-colors;
+}
+
+.daily-fact-link:hover {
+  @apply text-white;
+}
+
+.daily-fact-image-wrapper {
+  @apply flex
+    items-center
+    justify-center
+    p-space-lg;
+}
+
+.daily-fact-image {
+  @apply w-60
+    h-60
+    object-contain
+    brightness-95;
+}
