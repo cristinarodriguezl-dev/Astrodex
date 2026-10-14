@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./Carousel.css";
 
-export default function MoonCarousel() {
+export default function Carousel() {
   const [items, setItems] = useState([]);
   const [current, setCurrent] = useState(0);
   const [status, setStatus] = useState("loading");

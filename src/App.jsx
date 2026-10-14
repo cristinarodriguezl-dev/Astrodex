@@ -3,6 +3,7 @@ import CosmicBackground from "./components/cosmicBackground/CosmicBackground.jsx
 import Header from "./components/header/Header.jsx";
 import Footer from "./components/footer/Footer.jsx";
 import Home from "./components/pages/homePage/HomePage.jsx";
+import WikiPage from "./components/pages/wikiPage/WikiPage.jsx";
 
 export default function App() {
   return (
@@ -11,6 +12,7 @@ export default function App() {
       <CosmicBackground />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/wiki" element={<WikiPage />} />
       </Routes>
       <Footer />
     </div>

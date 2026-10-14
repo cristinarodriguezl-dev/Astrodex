@@ -1,0 +1,125 @@
+@reference "../../../../../index.css";
+
+.wiki-modal-backdrop {
+  @apply fixed
+    inset-0
+    z-[100]
+    bg-black/70
+    backdrop-blur-sm
+    flex
+    items-center
+    justify-center
+    p-space-md;
+}
+
+.wiki-modal {
+  @apply relative
+    w-full
+    max-w-lg
+    max-h-[85vh]
+    overflow-y-auto
+    bg-[#160f38]
+    border border-purple-500/25
+    rounded-xl
+    shadow-[0_0_50px_rgba(76,29,149,0.45)];
+}
+
+.wiki-modal-close {
+  @apply absolute
+    top-3
+    right-3
+    z-10
+    flex
+    items-center
+    justify-center
+    w-9
+    h-9
+    rounded-full
+    bg-[#12082b]/80
+    border border-purple-500/30
+    text-purple-200
+    backdrop-blur-md
+    transition-colors;
+}
+
+.wiki-modal-close:hover {
+  @apply bg-purple-900/80
+    text-white;
+}
+
+.wiki-modal-image-wrapper {
+  @apply w-full
+    h-52
+    bg-gradient-to-b
+    from-purple-950/60
+    to-[#160f38]
+    flex
+    items-center
+    justify-center
+    overflow-hidden;
+}
+
+.wiki-modal-image {
+  @apply w-full
+    h-full
+    object-cover;
+}
+
+.wiki-modal-placeholder {
+  @apply text-6xl
+    text-purple-300/70;
+}
+
+.wiki-modal-content {
+  @apply p-space-lg
+    flex
+    flex-col
+    gap-space-sm;
+}
+
+.wiki-modal-title {
+  @apply font-headline-md
+    text-headline-md
+    text-white
+    pr-10;
+}
+
+.wiki-modal-scroll {
+  @apply max-h-64
+    overflow-y-auto
+    pr-2;
+}
+
+.wiki-modal-text {
+  @apply font-body-md
+    text-body-md
+    text-slate-300
+    leading-relaxed;
+}
+
+.wiki-modal-link {
+  @apply inline-flex
+    w-fit
+    items-center
+    gap-space-xs
+    mt-space-xs
+    px-space-lg
+    py-3
+    rounded-full
+    bg-gradient-to-r
+    from-purple-600
+    via-fuchsia-600
+    to-indigo-600
+    text-white
+    font-label-lg
+    text-label-lg
+    font-bold
+    border border-purple-300/30
+    shadow-[0_0_20px_rgba(168,85,247,0.45)]
+    transition-all;
+}
+
+.wiki-modal-link:hover {
+  @apply shadow-[0_0_28px_rgba(192,132,252,0.6)]
+    scale-105;
+}

@@ -1,0 +1,37 @@
+@reference "../../../index.css";
+
+.wiki-page {
+  @apply relative z-10 w-full pb-space-2xl;
+}
+
+.wiki-page-main {
+  @apply w-full
+    max-w-container-max
+    mx-auto
+    pt-28
+    px-gutter-mobile
+    md:px-gutter-tablet
+    lg:px-gutter-desktop
+    flex
+    flex-col
+    gap-space-lg;
+}
+
+.wiki-page-header {
+  @apply text-center
+    max-w-2xl
+    mx-auto;
+}
+
+.wiki-page-title {
+  @apply font-headline-lg
+    text-headline-lg
+    text-white;
+}
+
+.wiki-page-subtitle {
+  @apply font-body-md
+    text-body-md
+    text-slate-300
+    mt-space-2xs;
+}

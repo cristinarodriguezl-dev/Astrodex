@@ -1,4 +1,4 @@
-import MoonCarousel from "./sections/carousel/Carousel.jsx";
+import Carousel from "./sections/carousel/Carousel.jsx";
 import DailyFact from "./sections/dailyFact/DailyFact.jsx";
 import ThreeDoors from "./sections/threeDoors/ThreeDoors.jsx";
 import FinalBanner from "./sections/finalBanner/FinalBanner.jsx";
@@ -19,7 +19,7 @@ export default function HomePage() {
 
       <div className="relative z-10">
         <DailyFact />
-        <MoonCarousel />
+        <Carousel />
         <ThreeDoors />
         <FinalBanner />
       </div>

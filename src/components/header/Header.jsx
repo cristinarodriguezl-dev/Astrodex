@@ -5,7 +5,7 @@ import "./Header.css";
 const NAV_LINKS = [
   { path: "/", label: "Inicio" },
   { path: "#", label: "Catálogo" },
-  { path: "#", label: "Astrowiki" },
+  { path: "/wiki", label: "Astrowiki" },
   { path: "#", label: "Observatorio" },
 ];
 

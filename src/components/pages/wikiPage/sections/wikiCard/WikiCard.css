@@ -1,0 +1,86 @@
+@reference "../../../../../index.css";
+
+.wiki-card {
+  @apply w-full
+    text-left
+    bg-[#160f38]/85
+    border border-purple-500/25
+    rounded-xl
+    overflow-hidden
+    shadow-lg
+    backdrop-blur-xl
+    transition-all
+    duration-300
+    flex
+    flex-col;
+}
+
+.wiki-card:hover {
+  @apply border-purple-400/50
+    shadow-[0_0_30px_rgba(168,85,247,0.25)]
+    -translate-y-1;
+}
+
+.wiki-card-image-wrapper {
+  @apply w-full
+    h-40
+    bg-gradient-to-b
+    from-purple-950/60
+    to-[#160f38]
+    flex
+    items-center
+    justify-center
+    overflow-hidden;
+}
+
+.wiki-card-image {
+  @apply w-full
+    h-full
+    object-cover;
+}
+
+.wiki-card-placeholder {
+  @apply text-5xl
+    text-purple-300/70;
+}
+
+.wiki-card-content {
+  @apply p-space-lg
+    flex
+    flex-col
+    gap-space-sm
+    flex-1;
+}
+
+.wiki-card-title {
+  @apply font-headline-sm
+    text-headline-sm
+    text-white
+    transition-colors;
+}
+
+.wiki-card:hover .wiki-card-title {
+  @apply text-purple-300;
+}
+
+.wiki-card-description {
+  @apply font-body-sm
+    text-body-sm
+    text-slate-300
+    flex-1;
+}
+
+.wiki-card-link {
+  @apply inline-flex
+    items-center
+    gap-1
+    font-label-md
+    text-label-md
+    text-purple-300
+    font-bold
+    transition-colors;
+}
+
+.wiki-card:hover .wiki-card-link {
+  @apply text-white;
+}

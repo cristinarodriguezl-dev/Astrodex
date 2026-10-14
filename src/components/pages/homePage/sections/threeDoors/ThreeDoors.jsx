@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./ThreeDoors.css";
 
 const DOORS = [
@@ -12,6 +13,7 @@ const DOORS = [
     title: "Astrowiki",
     text: "Artículos y curiosidades explicados de forma sencilla.",
     linkLabel: "Abrir Astrowiki",
+    to: "/wiki",
   },
   {
     icon: "travel_explore",
@@ -33,21 +35,37 @@ export default function ThreeDoors() {
         </div>
 
         <div className="three-doors-grid">
-          {DOORS.map((door) => (
-            <a key={door.title} href="#" className="three-doors-card">
-              <div className="three-doors-icon">
-                <span className="material-symbols-outlined">{door.icon}</span>
-              </div>
+          {DOORS.map((door) => {
+            const content = (
+              <>
+                <div className="three-doors-icon">
+                  <span className="material-symbols-outlined">{door.icon}</span>
+                </div>
 
-              <h3 className="three-doors-card-title">{door.title}</h3>
-              <p className="three-doors-card-text">{door.text}</p>
+                <h3 className="three-doors-card-title">{door.title}</h3>
+                <p className="three-doors-card-text">{door.text}</p>
 
-              <span className="three-doors-card-link">
-                {door.linkLabel}
-                <span className="material-symbols-outlined">arrow_forward</span>
-              </span>
-            </a>
-          ))}
+                <span className="three-doors-card-link">
+                  {door.linkLabel}
+                  <span className="material-symbols-outlined">arrow_forward</span>
+                </span>
+              </>
+            );
+
+            if (door.to) {
+              return (
+                <Link key={door.title} to={door.to} className="three-doors-card">
+                  {content}
+                </Link>
+              );
+            }
+
+            return (
+              <a key={door.title} href="#" className="three-doors-card">
+                {content}
+              </a>
+            );
+          })}
         </div>
       </div>
     </section>
