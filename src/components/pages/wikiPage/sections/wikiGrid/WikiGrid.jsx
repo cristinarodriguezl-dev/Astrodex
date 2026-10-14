@@ -26,7 +26,9 @@ export default function WikiGrid({
   if (items.length === 0) {
     return (
       <p className="wiki-grid-state">
-        No se encontraron resultados para «{query.trim()}».
+        {query.trim()
+          ? `No se encontraron resultados para «${query.trim()}».`
+          : "Escribe un término para buscar en la wiki."}
       </p>
     );
   }

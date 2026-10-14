@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { createPortal } from "react-dom";
 import "./WikiModal.css";
 
 export default function WikiModal({ item, onClose }) {
@@ -16,7 +17,8 @@ export default function WikiModal({ item, onClose }) {
     };
   }, [onClose]);
 
-  return (
+  // Portal en body para que quede por encima del header y el footer
+  return createPortal(
     <div className="wiki-modal-backdrop" onClick={onClose}>
       <div
         className="wiki-modal"
@@ -68,6 +70,7 @@ export default function WikiModal({ item, onClose }) {
           </a>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
